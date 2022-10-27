@@ -17,11 +17,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	if (!dest && !src)
 		return (dest);
-	if (dest < src)
-		return (ft_memcpy(dest, src, n));
 	s = src;
 	d = dest;
-	while (n--)
-		d[n] = s[n];
+	if (s <= d)
+		while (n--)
+			d[n] = s[n];
+	else
+		ft_memcpy(d, s, n);
 	return (dest);
 }
