@@ -6,35 +6,35 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:19:26 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/10/28 12:17:09 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/10/28 15:53:48 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	strlcat(char *dest, const char *src, size_t n)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	int	i;
-	int	j;
-	int	k;
-	int	m;
+	size_t	n;
+	int		i;
+	int		j;
+	int		k;
 
-	k = n;
 	i = 0;
-	while (k-- && dest[i] != '\0')
+	n = size;
+	while (dest[i] != '\0' && size-- != 0)
 		i++;
-	j = n - i;
-	if (j == 0)
-		return (i + ft_strlen(src));
-	m = 0;
-	while (src[m] != 0)
+	size = n - i;
+	if (size == 0)
+		return (i + strlen(src));
+	j = 0;
+	k = i;
+	while (src[j] != '\0')
 	{
-		if (j != 1)
+		if (size != 1)
 		{
-			dest[i] = src[m];
-			j--;
+			dest[k++] = src[j];
+			size--;
 		}
-		m++;
-		i++;
+		j++;
 	}
-	dest[i] = '\0';
-	return (i + ft_strlen(src));
+	dest[k] = '\0';
+	return (i + j);
 }

@@ -6,11 +6,11 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:07:19 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/10/28 12:16:50 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/10/28 12:31:08 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	strlcpy(char *dest, const char *src, size_t n)
+size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 {
 	int	i;
 
