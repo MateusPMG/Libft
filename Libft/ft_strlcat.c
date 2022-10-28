@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 15:07:19 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/10/28 12:16:50 by mpatrao          ###   ########.fr       */
+/*   Created: 2022/10/27 16:19:26 by mpatrao           #+#    #+#             */
+/*   Updated: 2022/10/28 12:17:09 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	strlcpy(char *dest, const char *src, size_t n)
+size_t	strlcat(char *dest, const char *src, size_t n)
 {
 	int	i;
+	int	j;
+	int	k;
+	int	m;
 
-	if (!n)
-		return (ft_strlen(src));
+	k = n;
 	i = 0;
-	while (i < size - 1 && src[i])
+	while (k-- && dest[i] != '\0')
+		i++;
+	j = n - i;
+	if (j == 0)
+		return (i + ft_strlen(src));
+	m = 0;
+	while (src[m] != 0)
 	{
-		dst[i] = src[i];
+		if (j != 1)
+		{
+			dest[i] = src[m];
+			j--;
+		}
+		m++;
 		i++;
 	}
-	dst[i] = '\0';
-	return (ft_strlen(src));
+	dest[i] = '\0';
+	return (i + ft_strlen(src));
 }
