@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/28 16:30:42 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/10/31 12:57:47 by mpatrao          ###   ########.fr       */
+/*   Created: 2022/10/31 12:20:22 by mpatrao           #+#    #+#             */
+/*   Updated: 2022/10/31 12:55:45 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+void	*memchr(const void *s, int c, size_t n)
 {
-	while (*s++)
-		if (*s == c)
+	unsigned char	k;
+
+	k = (unsigned char) c;
+	while (*s++ && n--)
+		if (*s == k)
 			return (s);
 	return (NULL);
+
 }
