@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 12:25:30 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/10/31 13:33:54 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/10/31 16:11:04 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ int		ft_tolower(int c);
 int		ft_tolower(int c);
 int		memcmp(const void *s1, const void *s2, size_t n);
 char	*strnstr(const char	*big, const char *little, size_t len);
+int		atoi(const char *nptr);
 
 #endif

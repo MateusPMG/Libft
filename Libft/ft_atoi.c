@@ -6,7 +6,34 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:11:18 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/10/31 15:11:19 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/10/31 16:14:52 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	atoi(const char *nptr)
+{
+	int	i;
+	int	n;
+	int	r;
+
+	i = 0;
+	n = 1;
+	r = 0;
+	while ((str[i] <= 13 && str[i] >= 9) || str[i] == 32)
+	{
+		i++;
+	}
+	while (str[i] && (str[i] == 43 || str[i] == 45))
+	{
+		if (str[i] == 45)
+			n *= -1;
+		i++;
+	}
+	while ((str[i] >= 48 && str[i] <= 57) && str[i])
+	{	
+		r = r * 10 + (str[i] - 48);
+		i++;
+	}
+	r = r * n;
+	return (r);
+}
