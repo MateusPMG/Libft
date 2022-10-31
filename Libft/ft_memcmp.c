@@ -6,7 +6,15 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 12:58:33 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/10/31 12:58:34 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/10/31 13:18:38 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	memcmp(const void *s1, const void *s2, size_t n)
+{
+	if (n == 0)
+		return (0);
+	while (*s1++ == *s2++ && n-- && *s1)
+		;
+	return ((unsigned char)*s1 - (unsigned char)*s2);
+}
