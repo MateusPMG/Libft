@@ -6,11 +6,11 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 11:49:16 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/11/01 16:35:52 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/11/02 12:07:30 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*calloc(size_t nelem, size_t elsize)
+void	*ft_calloc(size_t nelem, size_t elsize)
 {
 	void	*p;
 

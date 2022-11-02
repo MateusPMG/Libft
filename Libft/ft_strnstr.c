@@ -6,11 +6,11 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 13:24:23 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/10/31 15:59:48 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/11/02 12:06:16 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strnstr(const char	*big, const char *little, size_t len)
+char	*ft_strnstr(const char	*big, const char *little, size_t len)
 {
 	int	i;
 	int	j;

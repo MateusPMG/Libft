@@ -6,11 +6,11 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 13:57:53 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/11/01 16:41:03 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/11/02 12:07:08 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*p;
 	int		l;
