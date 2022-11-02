@@ -6,18 +6,22 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 14:38:28 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/10/31 11:37:45 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/11/02 13:13:12 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_bzero(void *s, size_t n)
 {
-	int	i;
-
+	size_t	i;
+	unsigned char	*p;
+	
+	p = s;
 	i = 0;
 	while (i < n)
 	{
-		(unsigned char *)s[i] = 0;
+		p[i] = 0;
 		i++;
 	}
 }

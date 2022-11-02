@@ -6,14 +6,21 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 16:30:42 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/10/31 12:57:47 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/11/02 14:16:46 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s++)
+	while (*s)
+	{
 		if (*s == c)
-			return (s);
+			return ((char *)s);
+		s++;
+	}
+	if (c == '\0')
+		return ((char *)s);
 	return (NULL);
 }
