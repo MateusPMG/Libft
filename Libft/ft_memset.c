@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 14:00:29 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/11/02 13:14:02 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/11/03 13:17:03 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*p;
 
 	p = s;

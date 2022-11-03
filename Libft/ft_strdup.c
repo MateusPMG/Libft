@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 13:57:53 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/11/02 13:17:12 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/11/03 13:17:25 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ char	*ft_strdup(const char *s)
 	ft_memcpy(p, s, l);
 	return (p);
 }
-

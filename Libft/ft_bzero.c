@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 14:38:28 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/11/02 13:13:12 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/11/03 13:16:36 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*p;
-	
+
 	p = s;
 	i = 0;
 	while (i < n)
