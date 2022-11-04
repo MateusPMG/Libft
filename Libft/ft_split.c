@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 15:07:19 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/11/04 16:55:15 by mpatrao          ###   ########.fr       */
+/*   Created: 2022/11/04 15:17:17 by mpatrao           #+#    #+#             */
+/*   Updated: 2022/11/04 18:04:29 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t n)
+char	**ft_split(char const *s, char c)
 {
-	size_t	i;
 
-	if (!n)
-		return (ft_strlen(src));
-	i = 0;
-	while (i < n - 1 && src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (ft_strlen(src));
 }
