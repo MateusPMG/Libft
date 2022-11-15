@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 15:17:17 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/11/09 16:17:52 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/11/15 20:01:14 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	stringcount(char const *s, char c)
 	int	i;
 
 	i = 0;
-	while (*s++)
+	while (*s)
 	{
 		while (*s == c)
 			s++;
@@ -25,6 +25,7 @@ int	stringcount(char const *s, char c)
 			i++;
 		while (*s && *s != c)
 			s++;
+		s++;
 	}
 	return (i);
 }
