@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 15:17:17 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/11/15 20:01:14 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/11/16 15:23:18 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,12 @@ int	stringcount(char const *s, char c)
 		while (*s == c)
 			s++;
 		if (*s)
+		{
 			i++;
+			s++;
+		}
 		while (*s && *s != c)
 			s++;
-		s++;
 	}
 	return (i);
 }
@@ -43,7 +45,7 @@ void	allocate(char **array, char const *s, char c)
 		previous = s;
 		while (*s != c && *s)
 			s++;
-		if (*s || s > previous)
+		if (*s == c || s > previous)
 		{
 			*temparray = ft_substr(previous, 0, s - previous);
 			temparray++;
@@ -60,7 +62,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	size = stringcount(s, c);
-	array = (char **)malloc(sizeof(char *) * size + 1);
+	array = (char **)malloc(sizeof(char *) * (size + 1));
 	if (!array)
 		return (NULL);
 	allocate(array, s, c);

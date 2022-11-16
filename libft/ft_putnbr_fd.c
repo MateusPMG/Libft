@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 16:57:08 by mpatrao           #+#    #+#             */
-/*   Updated: 2022/11/14 12:06:06 by mpatrao          ###   ########.fr       */
+/*   Updated: 2022/11/16 14:04:31 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 		if (n == INT_MIN)
 		{
 			ft_putstr_fd("-2147483648", fd);
+			return ;
 		}
 		n *= -1;
 		ft_putchar_fd('-', fd);
